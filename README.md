@@ -23,6 +23,7 @@ ollama pull nomic-embed-text
 
 ## Структура проекта
 
+```bash
 local-rag/
 ├── README.md
 ├── requirements.txt
@@ -32,6 +33,8 @@ local-rag/
 └── chroma_db/        # persistent vector store
 
 ## Запуск
+
+```bash
 1. Индексация - запускается 1 раз (python rag_data.py) в следствии загружает страницу документации, разбивает на чанки, считает эмбеддинги
 и сохраняет в ./chroma_db.
 2.Запросы - (python query_rag.py)
@@ -40,6 +43,8 @@ local-rag/
 3.Проверка качества - задаем 14 вопросов. Все вопросы и ответы можете найти в коммите. Тест специально структурирован на типы: прямые, факты, синтез, все контекста, провокации. Что способствует более точной проверки.
 
 #Вся архитектура
+
+```bash
 WebPage → WebBaseLoader → Documents
                               ↓
                  RecursiveCharacterTextSplitter
