@@ -11,12 +11,12 @@ RAG-система для ответов на вопросы по техниче
 ## Установка зависимостей
 
 
-```bash
+
 pip install langchain-community langchain-text-splitters langchain-chroma \
             langchain-ollama chromadb beautifulsoup4 lxml requests \
             tiktoken python-dotenv
 
-```bash
+
 ## Модели Ollama
 ollama pull llama3.2
 ollama pull nomic-embed-text
@@ -36,6 +36,7 @@ local-rag/
 и сохраняет в ./chroma_db.
 2.Запросы - (python query_rag.py)
 <img width="901" height="288" alt="Снимок экрана 2026-10-04 164421" src="https://github.com/user-attachments/assets/93bda2d7-f0ae-4e0f-9e2c-8b939b8c22c7" />
+
 3.Проверка качества - задаем 14 вопросов. Все вопросы и ответы можете найти в коммите. Тест специально структурирован на типы: прямые, факты, синтез, все контекста, провокации. Что способствует более точной проверки.
 
 #Вся архитектура
