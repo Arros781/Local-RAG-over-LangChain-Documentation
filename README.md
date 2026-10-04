@@ -10,7 +10,7 @@ RAG-система для ответов на вопросы по техниче
 
 ## Установка зависимостей
 
-```bash
+
 pip install langchain-community langchain-text-splitters langchain-chroma \
             langchain-ollama chromadb beautifulsoup4 lxml requests \
             tiktoken python-dotenv
