@@ -11,24 +11,18 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 from langchain_ollama import OllamaEmbeddings
 
-
 URL = "https://python.langchain.com/docs/how_to/recursive_text_splitter/"
-
 
 loader = WebBaseLoader(web_paths=(URL,), requests_kwargs={"timeout": 15})
 docs = loader.load()
 
-
-
 splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 all_splits = splitter.split_documents(docs)
-
 
 embeddings = OllamaEmbeddings(
     model="nomic-embed-text",
     base_url="http://127.0.0.1:11434",
 )
-
 
 vector_store = Chroma.from_documents(
     documents=all_splits,
